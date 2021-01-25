@@ -26,3 +26,64 @@ if(isMobile.any()){
 }else{
 	body.classList.add('mouse');
 }
+
+//Form
+/*
+let formOpen_02=document.querySelector('.icon');
+let formOpen=document.querySelector('.form');
+
+console.log(formOpen);
+
+formOpen_02.addEventListener('click', function(){
+	console.log(formOpen.style.height)
+	if(formOpen.style.height > '0px'){
+		formOpen.style.height = '0px';
+		formOpen_02.innerHTML = "open";
+		console.log(formOpen.style.height)
+	}else{
+		formOpen.style.height = '450px';
+		formOpen_02.innerHTML = "close";
+	}
+});
+*/
+
+//Sliders
+$(document).ready(function() {
+	$('.slider').slick({
+		arrows:true,
+		dots:true,
+		slidesToScroll:1,
+		slidesToShow:5,
+		asNavFor: '.sliderBig',
+		speed:300,
+		autoplay:false,
+		autoplaySpeed:2000,
+		pauseOnFocus: true,
+		pauseOnHocer: true,
+		pauseOnDotsHover: true,
+		draggable:true,
+		swipe:true,
+		waitForAnimate:true, //швидкімть прокрутки слайдера
+		centerMode:true,
+		rows:1,
+		fade:false,
+		responsive:[    //adaptive
+			{
+				breakpoint:768,
+				settings:{
+					arrows:false,
+					autoplay:true,
+					slidesToShow:3,
+				}
+			}
+		]
+	});
+	$('.sliderBig').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider',
+		adaptiveHeight:false,
+	});
+});
